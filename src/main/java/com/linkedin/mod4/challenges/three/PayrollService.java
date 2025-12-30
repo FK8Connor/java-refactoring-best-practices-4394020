@@ -31,10 +31,12 @@ public class PayrollService implements PayrollProcessor {
         this.payStub = payStub;
     }
 
+    @Override
+    public void processPayroll(int employeeId) {
+        calculateSalaries();
+    }
 
-    private List<Employee> employees;
-
-    public void calculateSalaries() {
+    private void calculateSalaries() {
         // load employee data
         String employeeDetails = employeeService.getEmployeeDetails(1);
         // calculate gross pay for each employee
@@ -48,7 +50,5 @@ public class PayrollService implements PayrollProcessor {
         // save payroll data
         payrollSaver.savePayStub(payStub);
     }
-
-    // other methods for managing employee data
 }
 

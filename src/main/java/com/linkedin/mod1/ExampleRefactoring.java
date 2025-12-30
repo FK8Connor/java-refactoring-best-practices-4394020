@@ -3,6 +3,7 @@ package com.linkedin.mod1;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class ExampleRefactoring {
     public static void main(String[] args) {

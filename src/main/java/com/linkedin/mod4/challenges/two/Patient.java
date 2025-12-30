@@ -10,10 +10,6 @@ public class Patient {
 
     private Name firstName;
     private Name lastName;
-    private Demographics age;
-    private Demographics gender;
-    private Demographics bloodType;
-    private ContactInfo address;
-    private ContactInfo phoneNumber;
+
 }
 
