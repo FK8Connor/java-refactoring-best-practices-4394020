@@ -14,24 +14,18 @@ import com.linkedin.mod4.challenges.Order;
 public class CheckoutController {
 
     public void processOrder(Order order) {
-       int totalAmount = calculateTotalAmnt(500);
-       applyDiscounts(totalAmount);
-       processPayment();
-       sendConfirmationEmail();
-       updateInventory();
-       updateOrderStatus();
+       double totalAmount = calculateTotalAmnt(order);
+       double discountedAmount = applyDiscounts((int) totalAmount);
+       processPayment(order, discountedAmount);
+       sendConfirmationEmail(order);
+       updateInventory(order);
+       updateOrderStatus(order);
 
-        // apply any discounts
-        // process the payment
-        // send confirmation emails
-        // update the inventory
-        // update the order status
     }
 
-    private int calculateTotalAmnt(int amount) {
-        int tax = amount * 10 / 100;
-        int shipping = 5;
-        int total = amount + tax + shipping;
+    private int calculateTotalAmnt(Order amount) {
+        // logic to calculate total amount
+        int total = 0;
         return total;
     }
 
@@ -41,19 +35,19 @@ public class CheckoutController {
         return totalAmount;
     }
 
-    private void processPayment() {
+    private void processPayment(Order order, double amount) {
         // logic to process payment
     }
 
-    private void sendConfirmationEmail() {
+    private void sendConfirmationEmail(Order order) {
         // logic to send confirmation email
     }
 
-    private void updateInventory() {
+    private void updateInventory(Order order) {
         // logic to update inventory
     }
 
-    private void updateOrderStatus() {
+    private void updateOrderStatus(Order order) {
         // logic to update order status
     }
 }
