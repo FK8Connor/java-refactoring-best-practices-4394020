@@ -8,68 +8,12 @@ package com.linkedin.mod4.challenges.two;
 
 public class Patient {
 
-    private String firstName;
-    private String lastName;
-    private int age;
-    private String gender;
-    private String bloodType;
-    private String address;
-    private String phoneNumber;
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getBloodType() {
-        return bloodType;
-    }
-
-    public void setBloodType(String bloodType) {
-        this.bloodType = bloodType;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+    private Name firstName;
+    private Name lastName;
+    private Demographics age;
+    private Demographics gender;
+    private Demographics bloodType;
+    private ContactInfo address;
+    private ContactInfo phoneNumber;
 }
 
