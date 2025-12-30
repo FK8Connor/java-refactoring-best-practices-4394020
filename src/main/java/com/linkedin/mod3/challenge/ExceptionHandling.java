@@ -6,12 +6,24 @@ public class ExceptionHandling {
     // The following code uses a general exception handler instead of specific handlers
     // for each exception. It also swallows exceptions without logging them.
     // Identify the problem areas and make the improvements.
-    public void doSomething() {
+    private SolidPrinciples solidPrinciples;
+
+    public ExceptionHandling(SolidPrinciples solidPrinciples) {
+        this.solidPrinciples = solidPrinciples;
+    }
+
+    public void doSomething() throws SQLException {
         try {
-            // some code that might throw an exception
-            throw new SQLException();
+            solidPrinciples.doSomethingA();
+            solidPrinciples.doSomethingB();
+            solidPrinciples.doSomethingC();
+
+            RemovingDeadCode removingDeadCode = new RemovingDeadCode("InitialName");
+            removingDeadCode.setName("Test");
+            String name = removingDeadCode.getName();
+
         } catch (Exception e) {
-            // do nothing
+           System.err.println("An error occurred: " + e.getMessage());
         }
     }
 }

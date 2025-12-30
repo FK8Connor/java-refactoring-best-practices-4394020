@@ -4,16 +4,16 @@ package com.linkedin.mod3.challenge;
 public class RemovingDeadCode {
     private String name;
 
-    public RemovingDeadCode(String name, int age) {
+    public RemovingDeadCode(String name) {
         this.name = name;
     }
+
+    public void setName(String name) {this.name = name;}
 
     public String getName() {
         return name;
     }
 
-    public void removeDeadCode() {
-        // some code
-    }
+
 
 }
